@@ -1,24 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22146" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xRy-gE-g02">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22122"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tictactoeImagePng" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-UB-cNQ">
+                                <rect key="frame" x="14" y="278" width="365" height="365"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="365" id="B9M-5t-V7q"/>
+                                    <constraint firstAttribute="width" constant="365" id="x7h-kk-p6t"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="48B-6Q-kPj">
+                                <rect key="frame" x="51.666666666666657" y="310.66666666666669" width="290" height="300.00000000000006"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-Tt-wSD">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xue-1Z-AFw" userLabel="multiply1" customClass="TTTImageView" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="zKA-Vn-b6g"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UF0-ZY-tAD" userLabel="multiply2" customClass="TTTImageView" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="105" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="VjK-uE-ya8"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cC1-oI-HSC" userLabel="multiply3" customClass="TTTImageView" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="210.00000000000003" y="0.0" width="79.999999999999972" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="jst-u7-KC9"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Srd-JQ-RfH"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="kOu-Fz-WMK">
+                                        <rect key="frame" x="0.0" y="110" width="290" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1WD-da-aya" userLabel="multiply4" customClass="TTTImageView" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="OZb-aN-DKQ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oqr-r6-Nc6" userLabel="multiply5" customClass="TTTImageView" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="105" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="q06-Kc-Syv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kBG-sf-WoW" userLabel="multiply6" customClass="TTTImageView" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="210.00000000000003" y="0.0" width="79.999999999999972" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="1Lx-df-n1j"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="30J-wm-L8c"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="sC8-TA-VXr">
+                                        <rect key="frame" x="0.0" y="219.99999999999994" width="290" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EgJ-h0-qN1" userLabel="multiply7" customClass="TTTImageView" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="r0c-1c-Pdj"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eiG-IL-K41" userLabel="multiply8" customClass="TTTImageView" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="105" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="3JM-6m-U08"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lKP-Zx-0ek" userLabel="multiply9" customClass="TTTImageView" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="210.00000000000003" y="0.0" width="79.999999999999972" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="lwh-aB-KXw"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="w9b-8b-0c3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vuT-UB-cNQ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Dvv-tT-BSW"/>
+                            <constraint firstItem="48B-6Q-kPj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ecR-hv-o7v"/>
+                            <constraint firstItem="48B-6Q-kPj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fKM-WX-NBi"/>
+                            <constraint firstItem="vuT-UB-cNQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vLQ-Dq-dhr"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QJh-7R-8Xv">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Mff-zp-r9J">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Pkf-jL-kUJ">
+                                <rect key="frame" x="16" y="5" width="88.666666666666671" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Connect"/>
+                                <connections>
+                                    <action selector="connectWithPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rr-f3-kAr"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="connectWithPlayer:" destination="BYZ-38-t0r" id="Og1-H9-NAe"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="62O-VE-Haq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1JC-Pu-sMN">
+                                <rect key="frame" x="269.33333333333331" y="5" width="107.66666666666669" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New Game"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outletCollection property="collection" destination="Xue-1Z-AFw" collectionClass="NSMutableArray" id="12P-9Y-7I2"/>
+                        <outletCollection property="collection" destination="UF0-ZY-tAD" collectionClass="NSMutableArray" id="Mt3-Z3-VN5"/>
+                        <outletCollection property="collection" destination="cC1-oI-HSC" collectionClass="NSMutableArray" id="wC0-Qs-Fln"/>
+                        <outletCollection property="collection" destination="1WD-da-aya" collectionClass="NSMutableArray" id="1Qs-u5-gU3"/>
+                        <outletCollection property="collection" destination="oqr-r6-Nc6" collectionClass="NSMutableArray" id="NlN-ML-ddZ"/>
+                        <outletCollection property="collection" destination="kBG-sf-WoW" collectionClass="NSMutableArray" id="NNH-GH-Zcu"/>
+                        <outletCollection property="collection" destination="EgJ-h0-qN1" collectionClass="NSMutableArray" id="YOk-V2-u06"/>
+                        <outletCollection property="collection" destination="eiG-IL-K41" collectionClass="NSMutableArray" id="Tyc-pz-wjo"/>
+                        <outletCollection property="collection" destination="lKP-Zx-0ek" collectionClass="NSMutableArray" id="90m-IX-637"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="991.60305343511448" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tgm-JX-hhj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xRy-gE-g02" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Lv-6B-6VE">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iiN-Nd-BIW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XoQ-1f-lor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.885496183206101" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tictactoeImagePng" width="170" height="170"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

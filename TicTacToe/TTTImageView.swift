@@ -7,14 +7,21 @@
 
 import UIKit
 
-class TTTImageView: UIImageView {
+final class TTTImageView: UIImageView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    private var activated: Bool! = false
+    var player: String?
+    
+    func setPlayer(_ player: String ){
+        self.player = player
+        
+        if activated == false {
+            if player == "x" {
+                self.image = UIImage(systemName: "multiply")
+            } else if player == "o" {
+                self.image = UIImage(systemName: "circle")
+            }
+            activated = true
+        }
     }
-    */
-
 }

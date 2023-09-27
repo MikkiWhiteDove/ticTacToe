@@ -13,6 +13,8 @@
 		DCAD784C2A814A2200D4BDCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAD784A2A814A2200D4BDCC /* Main.storyboard */; };
 		DCAD784E2A814A2500D4BDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAD784D2A814A2500D4BDCC /* Assets.xcassets */; };
 		DCAD78512A814A2500D4BDCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAD784F2A814A2500D4BDCC /* LaunchScreen.storyboard */; };
+		DCE90ECD2AB20C4C00F60333 /* TTTImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE90ECC2AB20C4C00F60333 /* TTTImageView.swift */; };
+		DCE90ECF2AB2260400F60333 /* MPCHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE90ECE2AB2260400F60333 /* MPCHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DCAD784D2A814A2500D4BDCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCAD78502A814A2500D4BDCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCAD78522A814A2500D4BDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCE90ECC2AB20C4C00F60333 /* TTTImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTImageView.swift; sourceTree = "<group>"; };
+		DCE90ECE2AB2260400F60333 /* MPCHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPCHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				DCAD78442A814A2200D4BDCC /* AppDelegate.swift */,
 				DCAD78462A814A2200D4BDCC /* SceneDelegate.swift */,
 				DCAD78482A814A2200D4BDCC /* ViewController.swift */,
+				DCE90ECC2AB20C4C00F60333 /* TTTImageView.swift */,
 				DCAD784A2A814A2200D4BDCC /* Main.storyboard */,
 				DCAD784D2A814A2500D4BDCC /* Assets.xcassets */,
 				DCAD784F2A814A2500D4BDCC /* LaunchScreen.storyboard */,
 				DCAD78522A814A2500D4BDCC /* Info.plist */,
+				DCE90ECE2AB2260400F60333 /* MPCHandler.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				DCAD78492A814A2200D4BDCC /* ViewController.swift in Sources */,
 				DCAD78452A814A2200D4BDCC /* AppDelegate.swift in Sources */,
+				DCE90ECF2AB2260400F60333 /* MPCHandler.swift in Sources */,
 				DCAD78472A814A2200D4BDCC /* SceneDelegate.swift in Sources */,
+				DCE90ECD2AB20C4C00F60333 /* TTTImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +308,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +337,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
